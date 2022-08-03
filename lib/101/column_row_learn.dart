@@ -7,7 +7,48 @@ class ColumRowLearn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: const Text('data'),
+      body: Column(
+        children: [
+          Expanded(
+              flex: 4,
+              child: Row(
+                children: [
+                  Expanded(child: Container(color: Colors.red)),
+                  Expanded(child: Container(color: Colors.green)),
+                  Expanded(child: Container(color: Colors.blue)),
+                  Expanded(child: Container(color: Colors.brown)),
+                ],
+              )),
+          const Spacer(flex: 2),
+          Expanded(
+              flex: 2,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: const [
+                  Text('a'),
+                  Text('a2'),
+                  Text('a3'),
+                ],
+              )),
+          SizedBox(
+            height: ProjectContainerSizes.cardHeight,
+            child: Column(
+              children: const [
+                Expanded(child: Text('data')),
+                Expanded(child: Text('data')),
+                Expanded(child: Text('data')),
+                Spacer(),
+                Expanded(child: Text('data')),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
+}
+
+class ProjectContainerSizes {
+  static const double cardHeight = 200;
 }
