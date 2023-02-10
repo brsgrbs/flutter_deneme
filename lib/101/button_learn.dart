@@ -13,12 +13,10 @@ class ButtonLearn extends StatelessWidget {
         children: [
           TextButton(
             onPressed: () {},
-            child: Text('Save', style: Theme.of(context).textTheme.subtitle1),
+            child: Text('Save', style: Theme.of(context).textTheme.titleMedium),
           ),
           ElevatedButton(onPressed: () {}, child: const Text('data')),
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.account_balance_rounded)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.account_balance_rounded)),
           FloatingActionButton(
             onPressed: () {},
             child: const Icon(Icons.add),
@@ -32,16 +30,13 @@ class ButtonLearn extends StatelessWidget {
           const SizedBox(height: 10),
           ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Colors.black,
-                shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
+                backgroundColor: Colors.black,
+                shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20))),
               ),
               onPressed: () {},
               child: Padding(
-                padding: const EdgeInsets.only(
-                    top: 20, bottom: 20, right: 40, left: 40),
-                child: Text('Place Bid',
-                    style: Theme.of(context).textTheme.headline5),
+                padding: const EdgeInsets.only(top: 20, bottom: 20, right: 40, left: 40),
+                child: Text('Place Bid', style: Theme.of(context).textTheme.headlineSmall),
               )),
         ],
       ),

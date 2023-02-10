@@ -34,8 +34,7 @@ class CustomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20), color: Colors.red),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: Colors.red),
     );
   }
 }
@@ -48,7 +47,7 @@ class TitleTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: Theme.of(context).textTheme.headline3,
+      style: Theme.of(context).textTheme.displaySmall,
     );
   }
 }

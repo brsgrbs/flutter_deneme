@@ -35,7 +35,7 @@ class NoteDemos extends StatelessWidget {
                     child: Center(
                         child: Text(
                       _createNote,
-                      style: Theme.of(context).textTheme.headline4,
+                      style: Theme.of(context).textTheme.headlineMedium,
                     )))),
             TextButton(onPressed: () {}, child: Text(_importNote)),
             const SizedBox(
@@ -49,9 +49,7 @@ class NoteDemos extends StatelessWidget {
 }
 
 class SubTitleWidget extends StatelessWidget {
-  const SubTitleWidget(
-      {Key? key, this.textAlign = TextAlign.center, required this.title})
-      : super(key: key);
+  const SubTitleWidget({Key? key, this.textAlign = TextAlign.center, required this.title}) : super(key: key);
   final TextAlign textAlign;
   final String title;
 
@@ -60,10 +58,7 @@ class SubTitleWidget extends StatelessWidget {
     return Text(
       title,
       textAlign: textAlign,
-      style: Theme.of(context)
-          .textTheme
-          .subtitle1
-          ?.copyWith(color: Colors.black, fontWeight: FontWeight.w400),
+      style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.black, fontWeight: FontWeight.w400),
     );
   }
 }
@@ -81,18 +76,14 @@ class TitleWidget extends StatelessWidget {
     return Center(
       child: Text(
         title,
-        style: Theme.of(context)
-            .textTheme
-            .headline5
-            ?.copyWith(color: Colors.black, fontWeight: FontWeight.w800),
+        style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.black, fontWeight: FontWeight.w800),
       ),
     );
   }
 }
 
 class PaddingItems {
-  static const EdgeInsets horizontalPadding =
-      EdgeInsets.symmetric(horizontal: 20);
+  static const EdgeInsets horizontalPadding = EdgeInsets.symmetric(horizontal: 20);
   static const EdgeInsets verticalPadding = EdgeInsets.symmetric(vertical: 20);
 }
 
